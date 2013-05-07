@@ -45,7 +45,7 @@ class ZendFramework {
      */
     public function registerZendFramework() {
     	
-    	set_include_path( get_include_path() . PATH_SEPARATOR . dirname(__FILE__) );
+    	set_include_path( get_include_path() . PATH_SEPARATOR . realpath(dirname(__FILE__)) );
     	
     	require_once 'Zend/Loader/Autoloader.php';
     	
