@@ -1,5 +1,7 @@
 <?php 
 
+namespace Cekurte;
+
 if( !defined('ABSPATH') ) exit;
 
 /*
@@ -11,12 +13,12 @@ Author: 		Cekurte Sistemas
 Author URI: 	http://sistemas.cekurte.com
 */
 
-if( !class_exists('CekurteZendFramework') ) :
+if( !class_exists('\\Cekurte\\ZendFramework') ) :
 
 /**
  * Realiza o Autoloader do ZendFramework
  */
-class CekurteZendFramework {
+class ZendFramework {
     
     /**
      * Adiciona um hook na inicialização do Wordpress
@@ -47,10 +49,10 @@ class CekurteZendFramework {
     	
     	require_once 'Zend/Loader/Autoloader.php';
     	
-		$autoloader = Zend_Loader_Autoloader::getInstance();
+		$autoloader = \Zend_Loader_Autoloader::getInstance();
     }
 }
 
-$GLOBALS['cekurte-zf'] = new CekurteZendFramework();
+$GLOBALS['cekurte-zf'] = new \Cekurte\ZendFramework();
 
 endif;

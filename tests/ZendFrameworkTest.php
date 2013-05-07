@@ -1,14 +1,14 @@
 <?php
 
-require_once realpath(dirname(__FILE__) . '/../CekurteZendFramework.php');
+require_once realpath(dirname(__FILE__) . '/../ZendFramework.php');
 
 /**
- * CekurteZendFramework Tests
+ * \Cekurte\ZendFramework Tests
  */
-class CekurteZendFrameworkTest extends WP_UnitTestCase {
+class ZendFrameworkTest extends WP_UnitTestCase {
     
 	/**
-     * @var CekurteZendFramework uma instância do plugin
+     * @var \Cekurte\ZendFramework uma instância do plugin
      */
     private $plugin	= null;
 
@@ -19,10 +19,10 @@ class CekurteZendFrameworkTest extends WP_UnitTestCase {
     }
     
     /**
-     * Verifica se o plugin é uma instância de CekurteZendFramework
+     * Verifica se o plugin é uma instância de \Cekurte\ZendFramework
      */
-    public function testIsInstanceOfCekurteDelivery() {
-    	$this->assertInstanceOf('CekurteZendFramework', $this->plugin);
+    public function testIsInstanceOfCekurteZendFramework() {
+    	$this->assertInstanceOf('\\Cekurte\\ZendFramework', $this->plugin);
     }
     
 	/**
