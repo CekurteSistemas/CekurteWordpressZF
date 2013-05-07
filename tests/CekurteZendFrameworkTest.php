@@ -1,26 +1,28 @@
 <?php
 
+require_once realpath(dirname(__FILE__) . '/../CekurteZendFramework.php');
+
 /**
- * Cekurte_ZF Tests
+ * CekurteZendFramework Tests
  */
-class Cekurte_ZF_Test extends WP_UnitTestCase {
+class CekurteZendFrameworkTest extends WP_UnitTestCase {
     
 	/**
-     * @var Cekurte_ZF uma instância do plugin
+     * @var CekurteZendFramework uma instância do plugin
      */
     private $plugin	= null;
 
     public function setUp() {
         parent::setUp();
-        $this->plugin = new Cekurte_ZF();
+        $this->plugin = $GLOBALS['cekurte-zf'];
         $this->plugin->init();
     }
     
     /**
-     * Verifica se o plugin é uma instância de Cekurte_ZF
+     * Verifica se o plugin é uma instância de CekurteZendFramework
      */
     public function testIsInstanceOfCekurteDelivery() {
-    	$this->assertInstanceOf('Cekurte_ZF', $this->plugin);
+    	$this->assertInstanceOf('CekurteZendFramework', $this->plugin);
     }
     
 	/**

@@ -11,17 +11,20 @@ Author: 		Cekurte Sistemas
 Author URI: 	http://sistemas.cekurte.com
 */
 
-if( !class_exists('Cekurte_ZF') ) :
+if( !class_exists('CekurteZendFramework') ) :
 
-class Cekurte_ZF {
+/**
+ * Realiza o Autoloader do ZendFramework
+ */
+class CekurteZendFramework {
     
     /**
-     * Cekurte_ZF
+     * Adiciona um hook na inicialização do Wordpress
      * 
      * @return void
      */
     public function __construct() {
-    	add_action('init', array($this, 'init'));
+    	add_action('init', array($this, 'init'), 1);
     }
     
     /**
@@ -47,5 +50,7 @@ class Cekurte_ZF {
 		$autoloader = Zend_Loader_Autoloader::getInstance();
     }
 }
+
+$GLOBALS['cekurte-zf'] = new CekurteZendFramework();
 
 endif;
